@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 1000px;
+    width: 90%;
+}
+
+.form-container {
+    padding: 30px;
+    flex: 1;
+}
+
+.form-container h1 {
+    color: #0073e6;
+    margin-bottom: 10px;
+}
+
+.form-container p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #888;
+}
+
+.social-login {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-login button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.google-btn {
+    background-color: #4285f4;
+    color: #fff;
+}
+
+.facebook-btn {
+    background-color: #4267b2;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0073e6;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #005bb5;
+}
+
+.login-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.image-container {
+    background-color: #0073e6;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .image-container {
+        display: none;
+    }
+}
