@@ -10,31 +10,50 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f4f8;
+    background-color: blue;
+    
 }
 
 .container {
     display: flex;
-    flex-direction: row;
+    width: 710px;
+    height: 1024px;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     overflow: hidden;
-    max-width: 1000px;
-    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 100vh; /* Menggunakan 100% tinggi viewport */
+    width: 100%; /* Memenuhi lebar body */
 }
 
-.form-container {
-    padding: 30px;
+.form-section {
     flex: 1;
+    padding: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.form-container h1 {
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.logo-title h1 {
     color: #0073e6;
-    margin-bottom: 10px;
 }
 
-.form-container p {
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.form-section p {
     margin-bottom: 15px;
     color: #555;
 }
@@ -42,13 +61,14 @@ body {
 .subtitle {
     font-size: 14px;
     color: #888;
+    margin-bottom: 20px;
 }
 
 .social-login {
-    margin: 20px 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 20px;
 }
 
 .social-login button {
@@ -68,6 +88,22 @@ body {
 .facebook-btn {
     background-color: #4267b2;
     color: #fff;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    color: #888;
+    font-size: 14px;
+}
+
+.divider hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid #ccc;
 }
 
 form {
@@ -107,26 +143,32 @@ form button:hover {
     text-decoration: none;
 }
 
-.image-container {
-    background-color: #0073e6;
+.gradient-section {
     flex: 1;
+    background: linear-gradient(135deg, #0073e6, #00c6ff);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    position: relative;
 }
 
-.image-container img {
-    max-width: 100%;
+.gradient-section img {
+    max-width: 60%;
     height: auto;
 }
 
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        height: auto;
     }
 
-    .image-container {
-        display: none;
+    .gradient-section {
+        height: 200px;
+        flex: none;
+    }
+
+    .gradient-section img {
+        max-width: 40%;
     }
 }
